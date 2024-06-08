@@ -2,7 +2,7 @@
   "name": "coloid",
   "version": "0.0.0",
   "repository": "briojs/coloid",
-  "description": "",
+  "description": "Beautiful console logger",
   "license": "MIT",
   "type": "module",
   "exports": {
