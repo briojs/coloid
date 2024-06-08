@@ -1,0 +1,51 @@
+{
+  "name": "coloid",
+  "version": "0.0.0",
+  "repository": "briojs/coloid",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "unbuild",
+    "lint": "eslint . && biome check .",
+    "lint:fix": "automd && eslint . --fix && biome check --apply .",
+    "format": "biome format --write",
+    "test": "vitest",
+    "prepack": "bun run build",
+    "dev": "jiti playground/index.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.0",
+    "@types/bun": "latest",
+    "eslint": "^9.1.1",
+    "eslint-config-briojs": "^0.0.9",
+    "jiti": "^1.21.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@clack/core": "^0.3.4",
+    "chalk": "^5.3.0",
+    "defu": "^6.1.4",
+    "figures": "^6.1.0",
+    "is-unicode-supported": "^2.0.0",
+    "sisteransi": "^1.0.5",
+    "std-env": "^3.7.0",
+    "string-width": "^7.1.0",
+    "strip-ansi": "^7.1.0"
+  }
+}
