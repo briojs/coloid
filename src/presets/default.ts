@@ -46,7 +46,7 @@ export const defaultPreset: Preset = {
           )
         : colorText(typesIcons[obj.type], typesColors[obj.type]);
     const leftSide = `${icon ? `${icon} ` : ''}${formatText(message)}`;
-    const rightSide = `${obj.tag ? chalk.gray(obj.tag) : ''} ${chalk.gray(obj.date.toLocaleTimeString())}`;
+    const rightSide = `${obj.tag ? chalk.gray(obj.tag) + ' ' : ''}${chalk.gray(obj.date.toLocaleTimeString())}`;
     const columns = process.stdout.columns || 0;
     const space = columns - stringWidth(leftSide) - stringWidth(rightSide) - 2;
 
